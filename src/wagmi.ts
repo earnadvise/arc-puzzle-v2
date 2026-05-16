@@ -37,6 +37,13 @@ export const LEADERBOARD_ABI = [
   },
   {
     "inputs": [],
+    "name": "MAX_LEADERBOARD_SIZE",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
     "name": "getScoresCount",
     "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
     "stateMutability": "view",
@@ -57,6 +64,18 @@ export const LEADERBOARD_ABI = [
         "name": "",
         "type": "tuple[]"
       }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "name": "scores",
+    "outputs": [
+      { "internalType": "address", "name": "user", "type": "address" },
+      { "internalType": "string", "name": "username", "type": "string" },
+      { "internalType": "uint256", "name": "score", "type": "uint256" },
+      { "internalType": "uint256", "name": "timestamp", "type": "uint256" }
     ],
     "stateMutability": "view",
     "type": "function"

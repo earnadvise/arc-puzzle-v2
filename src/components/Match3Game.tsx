@@ -73,7 +73,7 @@ export default function Match3Game({ username }: Match3GameProps) {
       return;
     }
 
-    if (LEADERBOARD_ADDRESS === '0x0000000000000000000000000000000000000000') {
+    if ((LEADERBOARD_ADDRESS as string) === '0x0000000000000000000000000000000000000000') {
        alert("Please deploy your contract and update LEADERBOARD_ADDRESS in wagmi.ts first!");
        return;
     }
